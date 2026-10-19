@@ -1,0 +1,19 @@
+{
+  "files": {
+    "build.py": "478f96055c7403000b080733838ea36c1f86ae4f5a83d037acd76dc960c31f37",
+    "reference_flux_sparge.py": "22a5b969a1a0e92f256d383f73fd16309a89cd184cca4d55d08bb7226542f07d",
+    "current_stream.cu": "5b8b3d2434cc41c41e6e6137fe1f39bd5b6e26d0d26c2fa9f953df46c2f20947",
+    "native_launch.patch": "d39958c09ffaebfeb5949c621dd1eb8183d9bdbd13598327b1eee14eb9105f36",
+    "probe.py": "1429106ce50893e275d0c2251820cd9efe5bc82fbe80484aed8138f6ed4d3485",
+    "csrc/reduction_utils.cuh": "e07a550e43b566c5e224262ce3cc5c9d9f6e2a1238a5b4044129d4144585be75",
+    "csrc/cp_async.cuh": "26822f5737962b11048aad28225a3b5d5fb624116feb4a5bbb107188173e71c2",
+    "csrc/numeric_conversion.cuh": "36568cf555d2d5cc540bcefa43c662956543937ecf4a19bc4db11cdc1b38c00b",
+    "csrc/math.cuh": "14db285a14752892543fbb4050d40ddd3590348016b6b2803d6c3caa6baa2bbf",
+    "csrc/mma.cuh": "b8673a5abb55a18b24d6d7afa902e0ccc794f2fcf2696543db91f77666986054",
+    "csrc/pytorch_extensions_utils.cuh": "6e7e953f0320f2293043299e75962d3ce5fd148a858e31fcbd6c998b656d9fe3",
+    "csrc/permuted_smem.cuh": "339e07ae005e35d9d3850eeca70e75c22c8adb2ee0122450789ee2b15911a950",
+    "csrc/qattn/qk_int_sv_f16_cuda_sm80.cuh": "5746e33754e8b129aaea7ad3214d46635c740cffa90bc8bc886304d7a9f85abf",
+    "csrc/qattn/decl.cuh": "2726199755e2f51c4c5dd9ad3ebb0d9292372f4609815585f6506be97f2fc526",
+    "csrc/qattn/attn_utils.cuh": "4767a0771fc84447c12898a35b2528da21f3bcc1f5a98d9fc2999fb8f0ebdb7a"
+  }
+}

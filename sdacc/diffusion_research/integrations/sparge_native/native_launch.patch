@@ -1,0 +1,11 @@
+--- upstream/csrc/qattn/qk_int_sv_f16_cuda_sm80.cuh
++++ private/csrc/qattn/qk_int_sv_f16_cuda_sm80.cuh
+@@ -695,7 +695,7 @@
+   dim3 grid(div_ceil(qo_len, CTA_Q), num_qo_heads, batch_size);
+   dim3 block(32, (CTA_Q / WARP_Q) * (CTA_K / WARP_K));
+ 
+-  kernel_func<<<grid, block, smem_max>>>(
++  kernel_func<<<grid, block, smem_max, at::cuda::getCurrentCUDAStream()>>>(
+     Q, 
+     K,
+     V,

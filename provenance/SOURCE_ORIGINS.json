@@ -1,0 +1,85 @@
+{
+  "purpose": "Shared adapters and reconstruction code origins; actual experiment results and producers are indexed separately.",
+  "model_adapters": {
+    "sigma": "models/sigma.py",
+    "flux": "models/flux.py",
+    "pixart-alpha": "models/pixart_alpha.py",
+    "dit-xl": "models/dit_xl.py (shared PixArt self-QKV/FFN; native class/CFG pipeline)",
+    "sd3-medium": "models/sd3.py:SD3Model",
+    "sd3.5-large": "models/sd3.py:SD35LargeModel (same MMDiT routing; checkpoint-native QK RMSNorm)"
+  },
+  "source_files": {
+    "code_flux_affine_select_v155/affine_select.py": "d97c146256160cb2a5af53755c060537e89961d3aede35d4180edf3c8765e97e",
+    "code_flux_single_model_v135/flux_adapter.py": "234fb4718eb5f4bb7e57b1ebccb9e0f3e3a00bb35ba34297575a434edf367a35",
+    "code_flux_single_model_v135/bank_slot.py": "e608133c6cd30eafcb5eb66f7a03ca70a8033e9c6e98c9b6df6431dddedc857b",
+    "code_flux_single_model_v135/library_binding.py": "db557fe3fa8238256876d074c8e05fed83022e1bd5b915446a007f6b50b83ea2",
+    "code_flux_single_model_v135/flux_projections.py": "9a81a0c643f7769893f432d5de6ca9da31369d850960a7296d6a5d440cfb35ce",
+    "code_sigma_priority_affine_v108/affine_math.py": "e06c4a72f9b2757c1debf308c857df92be515966758dfc4a4b9397d4f6b52ec1",
+    "code_sigma_priority_affine_v108/priority_memory.py": "d6b24643a6e2dd16c0890dd7069ea5be2e3464f4fea93e31c8faf5a0bca0b4cf",
+    "code_sigma_priority_affine_v108/affine_pilot.py": "7461d7cc8b5ca9717bd042e4eddf4f336c7636ff3ece8f5e331f09c7b82ca9a5",
+    "code_sigma_priority_affine_v108/library_binding.py": "db557fe3fa8238256876d074c8e05fed83022e1bd5b915446a007f6b50b83ea2",
+    "code_sigma_priority_affine_v108/affine_contract.py": "0d73e833986891ed2e981e5cb6d525b9da7ed71fb5e09eb82a00f6fd739a5c1c",
+    "code_sigma_priority_affine_v108/affine_evaluate.py": "4b205c063090fb1e34179581ccf2d6d2e26491af89433cd2a2b7d75374719aa8",
+    "code_sigma_priority_affine_v108/experiment_common.py": "d2502b4a0d87d6014dc505894c6ad3d36c9c0a764024be012b69f1d5fcd62b50",
+    "code_sigma_priority_affine_v108/affine_runtime.py": "96a39860fca7d87c5c34b34464956732a181c9289565f94f614735c62c957bde",
+    "code_sigma_priority_affine_v108/sigma_runtime.py": "46da4802e93ea97c2f34c6e076692df86e15762d06e17e785f845f8b680e36d2",
+    "code_sigma_priority_affine_v108/affine_fit.py": "95b652ab750cd10fe872f20dce1f6b310ebdf78b0a8995b16676505bc1a94f90",
+    "code_flux_same_process_schedule_v148/same_process_shadow_maps148.py": "e7cc880dbcab45c5b2c01c634a1b2b6824625d0dda2207b64524ffd1273a40a6",
+    "code_flux_direct_affine_io_v296/moments293.py": "b984486ff82151607d8acdc0bfd93b017b7e724a364e657e15cd0efd7fa2cfa5",
+    "code_flux_direct_affine_io_v296/affine_math108.py": "e06c4a72f9b2757c1debf308c857df92be515966758dfc4a4b9397d4f6b52ec1",
+    "code_flux_direct_affine_io_v296/collect293.py": "86731e6d5044dcdfb4a7e81bb1d84f543a72b3e31ffe5fbf944bab4bdc152319",
+    "shared/metrics/scalar_metric_contract.py": "ca3c02b243063d9597abb6a04babf50b3eaaec8c23444a1e230aa676c58825ae",
+    "shared/metrics/metric_assets.py": "ecd83331759c6f1fcb639fae9a1e4f42d5b288cd13e14a626658d6f0403f6034",
+    "shared/sdacc/sensitivity_models.py": "89fa5ebc4bec3a644e7ff65fc49690df818f865ffdaa6e3beb6ed6813be30638",
+    "shared/scripts/residency_guard.py": "b46ac58dafadf67496b62213fae37ce82ef62f28f3c85db4e4c168d6e8dbef0e",
+    "shared/scripts/memory_model_loader135.py": "7220f8348368ab1b5c8088429ac72a1e22fc490073a2c5c541da00a36bf306ec",
+    "shared/scripts/slot_loader.py": "a0a977aef23239a27b96211eb74f4b8b096894b6ccc8ded3cf50e068874641e1",
+    "shared/sdacc/vendor_nvml/pynvml.py": "5a7630d308fc8429ded7a74c9638a021faafe5384f76bd630ae3ccaa58307029",
+    "code_sigma_priority_budget_v106/scripts/priority_allocation.py": "8808de18d0af418c0ade373cda67f4ae755b5de7131e6edc99519bad69f7f0c3",
+    "obsdiff_joint_reconstruction_20261011/code_joint_full_v2/obsdiff_joint.py": "c88b4b1e69b06ff8998f485d45108014c7ea17468caf86d9ccfb09d3f69348e3"
+  },
+  "archive_index": "experiments/int8_slidesparse_obc_20261008/joint_schedule_followup_20261011/maintenance/legacy_models/INDEX.json",
+  "model_extension": {
+    "pixart-alpha": {
+      "resolution": 256,
+      "steps": 20,
+      "scheduler": "DPM-Solver++",
+      "bank_method": "OBS-Diff fixed-order shared-curvature joint INT8"
+    }
+  },
+  "legacy_results_from_original_frozen_producers": [
+    "sigma",
+    "flux"
+  ],
+  "new_measurements": {
+    "pixart-alpha": {
+      "root": "experiments/pixart_alpha_256",
+      "timing_PID": 2144775,
+      "source_archive": "source_code.tar.gz"
+    }
+  },
+  "orthogonal_integrations": {
+    "organized_on": "2026-10-19",
+    "source_thread": "01a13554-24c3-7492-8015-1d0e8d91045a",
+    "target_thread": "01a1232b-df45-7243-b0b4-18b22be503ba",
+    "file_origins": "integrations/FILE_ORIGINS.json",
+    "pre_organization_package_manifest_SHA": "7094196ff31979c7e59f395011096038d39f4d7e4d99f707b67a1858ec850b46",
+    "source_result_binding": "Original frozen source/PID is retained. Relocated modules are static/import checked, not newly GPU accepted.",
+    "native_reference_note": "integrations/sparge_native/reference_flux_sparge.py is byte-preserved provenance, not a runtime import entrypoint."
+  },
+  "quality64_followup": {
+    "requested_on": "2026-10-19",
+    "driver_source": "experiments/sigma_orthogonal_20261013/code/orthogonal_quality64",
+    "driver_manifest_SHA": "f0acd431ad968ce12df3ea1c6d8c3a3a4b6f6e6a2786f6207bd24fb0f790c87f",
+    "plan_SHA": "132da791dbdf01196228fa2225f80bb52ba77665e66c8012ec63f969a4808c93",
+    "metric_scalar_change": "Optional independent audit; default behavior preserved. Newly authorized64 uses official scalar once per image.",
+    "run_state": "complete",
+    "configuration_records": 57,
+    "per_image_rows": 3648,
+    "new_trajectories": 1664,
+    "peak_concurrent_GPU_jobs": 1,
+    "actual_successful_jobs": 17,
+    "result_SHA": "9a5b99195bf235a306d799bd1b1a49114c7a1b96b89c3cdeb798ff17481a5558",
+    "completion_receipt": "experiments/sigma_orthogonal_20261013/quality/eval64_20261019/DELIVERY_RECEIPT.json"
+  }
+}

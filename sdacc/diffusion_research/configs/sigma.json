@@ -1,0 +1,20 @@
+{
+  "model": "sigma",
+  "spec_name": "pixart-sigma",
+  "library": "../../w8a8_slidesparse",
+  "checkpoint": "../../../models/PixArt-Sigma-XL-2-1024-MS",
+  "conditions": "../../../data/sigma/conditions.json",
+  "conditioning_directory": "../../../data/sigma/conditioning",
+  "units": "../../../data/sigma/units.json",
+  "bank_directory": "../../../data/sigma/prepared",
+  "policy_file": "../../../data/sigma/policies.json",
+  "coefficients_directory": "../../../data/sigma/calibration",
+  "dense_results": "../../../data/sigma/dense",
+  "metric_assets": "../../../data/metric_assets",
+  "dense_generation": "../../../data/sigma/dense/generation_complete.json",
+  "dense_decode": "../../../data/sigma/dense/decode_complete.json",
+  "projection_execution": "recommended",
+  "sparse_cuda_graph": true,
+  "share_graph_scratch": true,
+  "benchmark_dense_graph_control": true
+}

@@ -1,0 +1,62 @@
+{
+  "model": "dit-xl",
+  "spec_name": "dit512",
+  "library": "../../w8a8_slidesparse",
+  "checkpoint": "../../../models/DiT-XL-2-512",
+  "spec": {
+    "resolution": 512,
+    "steps": 50,
+    "guidance": 4.0,
+    "max_sequence_length": 0
+  },
+  "conditions": "../../../data/dit-xl/conditions.json",
+  "conditioning_source": "../../../data/dit-xl/conditions.json",
+  "conditioning_directory": "../../../data/dit-xl/conditioning",
+  "prepare_text_conditioning": false,
+  "units": "../../../data/dit-xl/units.json",
+  "bank_directory": "../../../data/dit-xl/prepared",
+  "policy_file": "../../../data/dit-xl/policies.json",
+  "coefficients_directory": "../../../data/dit-xl/calibration",
+  "dense_results": "../../../data/dit-xl/dense",
+  "dense_generation": "../../../data/dit-xl/dense/generation_complete.json",
+  "dense_decode": "../../../data/dit-xl/dense/decode_complete.json",
+  "metric_assets": "../../../data/metric_assets",
+  "study_directory": "../../../data/dit-xl",
+  "phases": [
+    [
+      0,
+      10
+    ],
+    [
+      10,
+      20
+    ],
+    [
+      20,
+      30
+    ],
+    [
+      30,
+      40
+    ],
+    [
+      40,
+      50
+    ]
+  ],
+  "sparsities": [
+    15,
+    25,
+    35,
+    45
+  ],
+  "calibration_conditions": 100,
+  "evaluation_conditions": 64,
+  "sample_memory_per_projection": false,
+  "bulk_moments": true,
+  "projection_execution": "recommended",
+  "sparse_cuda_graph": true,
+  "share_graph_scratch": true,
+  "benchmark_dense_graph_control": true,
+  "initial_raw_profile": true
+}

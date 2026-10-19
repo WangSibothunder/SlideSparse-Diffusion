@@ -1,0 +1,25 @@
+{
+  "model": "flux",
+  "spec_name": "flux-dev",
+  "spec": {
+    "resolution": 512,
+    "steps": 50,
+    "guidance": 3.5,
+    "max_sequence_length": 512
+  },
+  "library": "../../w8a8_slidesparse",
+  "checkpoint": "../../../models/7a2a78fe44f3a51c8ab95f1b6de4de8148def560",
+  "conditions": "../../../data/flux/conditions.json",
+  "units": "../../../data/flux/units.json",
+  "packed_manifest": "../../../data/flux/packed/complete.json",
+  "slot_plan": "../../../data/flux/slot_plan.json",
+  "memory_plan": "../../../data/flux/memory_plan.json",
+  "policy_file": "../../../data/flux/policies.json",
+  "coefficients_directory": "../../../data/flux/calibration",
+  "dense_results": "../../../data/flux/dense",
+  "metric_assets": "../../../data/metric_assets",
+  "batch_parameters": true,
+  "sparse_cuda_graph": true,
+  "share_graph_scratch": true,
+  "benchmark_dense_graph_control": true
+}

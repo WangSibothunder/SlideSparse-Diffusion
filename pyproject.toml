@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "slidesparse-diffusion"
+version = "0.1.0"
+description = "Shared structured-sparse W8A8 diffusion runtime and multi-model research adapters"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "Sibo Wang"}]
+dependencies = []
+
+[project.optional-dependencies]
+inference = [
+  "torch==2.5.1",
+  "triton==3.1.0; sys_platform == 'linux'",
+  "diffusers>=0.35,<0.36",
+  "transformers>=4.44,<5",
+  "accelerate>=0.33,<2",
+  "numpy>=1.26,<3",
+  "safetensors>=0.4",
+  "sentencepiece>=0.2",
+  "protobuf>=4",
+  "Pillow>=10",
+]
+metrics = ["scipy>=1.11", "scikit-image>=0.22", "open-clip-torch>=2.24", "image-reward>=1.5"]
+
+[project.scripts]
+slidesparse-diffusion = "sdacc.diffusion_research.cli:main"
+
+[project.urls]
+Repository = "https://github.com/WangSibothunder/SlideSparse-Diffusion"
+Issues = "https://github.com/WangSibothunder/SlideSparse-Diffusion/issues"
+
+[tool.setuptools]
+license-files = ["LICENSE", "NOTICE", "LICENSES/*"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sdacc*"]
+
+[tool.setuptools.package-data]
+"sdacc.diffusion_research" = ["*.json", "*.md", "configs/*.json", "integrations/*.json", "integrations/*.md", "integrations/cachequant/csrc/*", "integrations/sparge_native/*.json", "integrations/sparge_native/*.md", "integrations/sparge_native/*.cu", "integrations/sparge_native/*.patch", "integrations/sparge_native/csrc/*.cuh", "integrations/sparge_native/csrc/qattn/*.cuh"]
+"sdacc.w8a8_slidesparse" = ["*.json", "*.md", "csrc/*.cu", "csrc/*.cuh", "reference/*.json", "reference/*.txt", "workloads/*.json"]

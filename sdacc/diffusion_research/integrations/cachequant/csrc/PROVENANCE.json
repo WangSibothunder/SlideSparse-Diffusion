@@ -1,0 +1,9 @@
+{
+  "base_source": "library_snapshot/csrc/dualscale_sm80.cu",
+  "base_sha": "f27beddfed9f44b10a239772acc812f78cf78a999fbbeaea7ccd22f3a16c587f",
+  "packed_metadata_body_verbatim": true,
+  "MMA_C0_verbatim": true,
+  "epilogue": "new direct INT32 stores; no early BF16",
+  "namespace": "private sigma_orthogonal_sparse_int32_sm80",
+  "shared_core_changed": false
+}

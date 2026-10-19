@@ -1,0 +1,60 @@
+{
+  "scope": "Optional research integrations; never enabled by model discovery or import.",
+  "integrations": [
+    {
+      "name": "plain-cache-cem",
+      "modules": [
+        "cache.py",
+        "cache_pilot.py"
+      ],
+      "status": "historical paired speed and 64-image studies; artifacts distributed separately",
+      "notes": "Whole-prediction cache, preserve full scheduler calls; do not label this DuCa."
+    },
+    {
+      "name": "pixart-duca-cem",
+      "modules": [
+        "models/pixart_duca.py",
+        "duca_pilot.py"
+      ],
+      "status": "historical Alpha studies; GPL-3.0 DuCa-derived adapter",
+      "notes": "Internal feature cache with CEM-selected refresh; not universal quality/speed admission."
+    },
+    {
+      "name": "sigma-cem-duca",
+      "modules": [
+        "integrations/sigma_cem.py"
+      ],
+      "status": "external preserved research package required",
+      "environment": "SDACC_ORTHOGONAL_ROOT",
+      "notes": "Lazy bridge to sigma_orthogonal.cem_api; original package is not bundled."
+    },
+    {
+      "name": "flux-sparge",
+      "modules": [
+        "models/flux_sparge.py",
+        "models/flux_sparge_prepare.py",
+        "sparge_pilot.py",
+        "integrations/sparge_native"
+      ],
+      "status": "experimental; original four-rate negative results retained separately",
+      "notes": "Latest fixed-QKV layout correction did not beat SDPA in complete attention; repaired four-rate sweep was not run."
+    },
+    {
+      "name": "cachequant",
+      "modules": [
+        "integrations/cachequant",
+        "models/sigma_cachequant.py"
+      ],
+      "status": "hold; no complete model performance/quality admission",
+      "notes": "Local arithmetic/OBS adapters only; upstream quantizer and provenance assets are external and not redistributed."
+    },
+    {
+      "name": "quality64",
+      "modules": [
+        "integrations/quality64"
+      ],
+      "status": "archive-oriented backfill driver",
+      "notes": "Requires original six-cohort study plan and separately retained frozen sources; does not replace the core model scoring entrypoint."
+    }
+  ]
+}

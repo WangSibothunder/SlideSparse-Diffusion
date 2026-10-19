@@ -1,0 +1,52 @@
+{
+  "models": {
+    "dit-xl": {
+      "adapter_status": "implemented",
+      "config": "configs/dit-xl.json",
+      "checkpoint_directory": "DiT-XL-2-512",
+      "artifacts_included": false,
+      "experiment_status": "adapter only; no complete model study claimed",
+      "recompute": false
+    },
+    "flux": {
+      "adapter_status": "implemented",
+      "config": "configs/flux.json",
+      "checkpoint_directory": "7a2a78fe44f3a51c8ab95f1b6de4de8148def560",
+      "artifacts_included": false,
+      "experiment_status": "historical experiments exist; outputs retained separately",
+      "recompute": false
+    },
+    "pixart-alpha": {
+      "adapter_status": "implemented",
+      "config": "configs/pixart-alpha.json",
+      "checkpoint_directory": "PixArt-XL-2-256x256",
+      "artifacts_included": false,
+      "experiment_status": "historical experiments exist; outputs retained separately",
+      "recompute": false
+    },
+    "sd3-medium": {
+      "adapter_status": "implemented",
+      "config": "configs/sd3-medium.json",
+      "checkpoint_directory": "stable-diffusion-3-medium-diffusers",
+      "artifacts_included": false,
+      "experiment_status": "historical experiments exist; outputs retained separately",
+      "recompute": false
+    },
+    "sd3.5-large": {
+      "adapter_status": "implemented",
+      "config": "configs/sd3.5-large.json",
+      "checkpoint_directory": "stable-diffusion-3.5-large",
+      "artifacts_included": false,
+      "experiment_status": "historical experiments exist; outputs retained separately",
+      "recompute": false
+    },
+    "sigma": {
+      "adapter_status": "implemented",
+      "config": "configs/sigma.json",
+      "checkpoint_directory": "PixArt-Sigma-XL-2-1024-MS",
+      "artifacts_included": false,
+      "experiment_status": "historical experiments exist; outputs retained separately",
+      "recompute": false
+    }
+  }
+}

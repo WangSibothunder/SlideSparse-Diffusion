@@ -1,0 +1,29 @@
+SlideSparse-Diffusion
+Copyright 2026 Sibo Wang
+
+Repository-authored code and the combined distribution are provided under
+GNU GPL version 3. Third-party portions retain their original licenses.
+
+DuCa-derived PixArt adapter:
+  Shenyi-Z/DuCa, revision 0a7151b7bfea3822295e8d29f26cd2e10756670c
+  GNU GPL version 3; retained in LICENSES/DuCa-LICENSE.txt.
+  Local adaptations add shared sparse projection routing, resident buffers,
+  CEM refresh selection and complete-denoiser execution integration.
+
+SlideSparse reference:
+  bcacdwk/vllmbench, local SlideSparse reference checkout
+  Apache License 2.0; retained in LICENSES/SlideSparse-Apache-2.0.txt.
+  The bundled W8A8 backend is the project's own SM80 implementation with
+  NVIDIA CUTLASS mainloop/metadata support; it is not the upstream vLLM package.
+
+SpargeAttn native specialization:
+  thu-ml/SpargeAttn, revision ae5b629ebb41e41f86b3ea2ab5a3283f13ac151a
+  Apache License 2.0; retained in LICENSES/SpargeAttn-Apache-2.0.txt.
+  Original notices in native headers are retained. Local changes add an
+  explicit current-stream launcher and fixed FLUX SM80/head128 integration.
+
+NVIDIA CUTLASS and NVML bindings:
+  BSD-3-Clause licenses retained in LICENSES/ and at the relevant source.
+  CUTLASS headers are an external pinned build dependency, not vendored here.
+
+See THIRD_PARTY_NOTICES.md and provenance/ for source and modification scope.

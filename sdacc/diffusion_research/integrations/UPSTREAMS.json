@@ -1,0 +1,26 @@
+{
+  "cem": {
+    "repository": "leaves162/CEM",
+    "commit": "ffa2a615ac7567a0103d53c8e8baa2b54898eb3c",
+    "files": 4,
+    "manifest_sha": "c175086fe8777284c598dd1a085da6c763a7388b8a30a6e538d66ad668668117"
+  },
+  "duca": {
+    "repository": "Shenyi-Z/DuCa",
+    "commit": "0a7151b7bfea3822295e8d29f26cd2e10756670c",
+    "files": 118,
+    "manifest_sha": "4318566a72116eb7c7e7ad4b4ce9513dc68d7a74d083f27f45fbddf6e758cc8e"
+  },
+  "cachequant": {
+    "repository": "BienLuky/CacheQuant",
+    "commit": "9470ddf1bac09337ce3281f797357ac35997a358",
+    "files": 36,
+    "manifest_sha": "c590114d05b584a9e4ebd98dfedd4bd9410e5fdb2a1a26f36306202a55c43e46"
+  },
+  "spargeattn": {
+    "repository": "thu-ml/SpargeAttn",
+    "commit": "ae5b629ebb41e41f86b3ea2ab5a3283f13ac151a",
+    "files": 60,
+    "manifest_sha": "83ef7ddf78176944400f70ab46a8cd204514fcc521fe1c63375c0703a0dec24f"
+  }
+}
